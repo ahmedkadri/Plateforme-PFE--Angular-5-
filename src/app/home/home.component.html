@@ -1,0 +1,34 @@
+<p>
+  home works!
+</p>
+<h1>
+  My Contacts
+ 
+  My name is {{ Users1.usermail }}
+  
+  </h1>
+  <div>
+    <table  style="width:100%">
+        <tr>
+            <th>userid</th>
+            <th>firstname</th>
+            <th>lastname</th>
+            <th>usermail</th>
+            <th>roles</th>
+        
+        </tr>
+        <tr *ngFor="let user2 of Users">
+            <td> {{ user2.userid }} </td>
+            <td> {{ user2.firstname }} </td>
+            <td> {{ user2.lastname }} </td>
+            <td> {{ user2.usermail }} </td>
+              <ul *ngFor="let role of user2.roles">
+                <li> {{ role.name }} </li>
+              </ul>
+            
+        </tr>
+        </table>
+  
+  </div>
+
+  <p> {{ getroles() }} </p>
